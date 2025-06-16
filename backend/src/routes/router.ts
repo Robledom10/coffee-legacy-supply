@@ -5,6 +5,7 @@ import { pedidosRouter } from "./pedidos";
 import { detallePedidoRouter } from "./detallePedido";
 import { resenasRouter } from "./resenas";
 import { direccionesRouter } from './direccionesEnvio';
+import { categoriasRouter } from './categorias';
 
 export function router(req: IncomingMessage, res: ServerResponse) {
   const url = req.url || "";
@@ -14,6 +15,7 @@ export function router(req: IncomingMessage, res: ServerResponse) {
   if (url.startsWith("/api/detalle-pedido")) return detallePedidoRouter(req, res);
   if (url.startsWith("/api/resenas")) return resenasRouter(req, res);
   if (url.startsWith('/api/direcciones')) return direccionesRouter(req, res);
+  if (url.startsWith('/api/categorias')) return categoriasRouter(req, res);
   res.statusCode = 404;
   res.end("Not Found");
 }
