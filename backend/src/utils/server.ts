@@ -1,5 +1,5 @@
 import http from 'http';
-import { router } from './routes/router';
+import { router } from '../routes/router';
 
 const server = http.createServer((req, res) => {
   // Cabeceras CORS
