@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Register</title>
+    <link rel="stylesheet" href="../styles/styleRegistro.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="register-page-container">
+        <div class="register-image-section">
+            <img src="../assets/img/cofe.jpeg" alt="Coffee Beans">
+        </div>
+        <div class="register-form-section">
+            <div class="register-box">
+                <h1>Registrarse!</h1>
+
+                <form id="registerForm">
+                    <div class="input-group">
+                        <span class="material-icons">person</span>
+                        <input type="text" id="regName" placeholder="Nombre:" required>
+                    </div>
+                    <div class="input-group">
+                        <span class="material-icons">email</span>
+                        <input type="email" id="regEmail" placeholder="Correo:" required>
+                    </div>
+                    <div class="input-group">
+                        <span class="material-icons">lock</span>
+                        <input type="password" id="regPassword" placeholder="Contraseña:" required>
+                        <span class="material-icons password-toggle" id="toggleRegPassword">visibility_off</span>
+                    </div>
+
+                    <div class="social-login-separator">
+                        <hr>
+                        <span>O</span>
+                        <hr>
+                    </div>
+                      <div class="social-icons">
+                          <a href="#" class="social-icon facebook" aria-label="Facebook" title="Facebook">
+                              <i class="fab fa-facebook-f"></i>
+                           </a>
+                           <a href="#" class="social-icon google" aria-label="Google" title="Google">
+                              <i class="fab fa-google"></i>
+                          </a>
+                      </div>
+
+
+                    <button type="submit" class="btn-confirmar">Confirmar</button>
+                </form>
+
+                <p class="login-text">¿Ya tienes cuenta? <a href="login.html" class="login-link">Iniciar Sesión</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/api/registro.js"></script>
+</body>
+</html>

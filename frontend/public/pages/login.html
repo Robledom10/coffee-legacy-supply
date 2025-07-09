@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Login</title>
+    <link rel="stylesheet" href="../styles/login.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h1>Bienvenidos a coffee!</h1>
+            <p>Por favor, inicia sesión para continuar.</p>
+
+            <form id="loginForm">
+                <div class="input-group">
+                    <span class="material-icons">person</span>
+                    <input type="text" id="username" placeholder="usuario" required>
+                </div>
+                <div class="input-group">
+                    <span class="material-icons">lock</span>
+                    <input type="password" id="password" placeholder="contraseña" required>
+                    <span class="material-icons password-toggle" id="togglePassword">visibility_off</span>
+                </div>
+                <a href="#" class="forgot-password">¿Olvidaste la contraseña?</a>
+
+                <button type="submit" class="btn-confirmar">Confirmar</button>
+            </form>
+
+            <p class="signup-text">¿No tengo cuenta? <a href="registro.html" class="signup-link">Regístrar</a></p>
+        </div>
+    </div>
+
+    <script src="../js/api/login.js"></script>
+</body>
+</html>

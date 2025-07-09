@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/stylenav.css">
+</head>
+<body>
+     <header class="header">
+            <div class="header-left">
+                <img src="../assets/img/Logo.png" alt="Logo Coffee Legacy Supply"
+                    class="logo">
+            </div>
+
+            <nav class="navigation">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../pages/tienda.html"> Mi tienda</a></li>
+                    <li><a href="./sobreNosotros.html">Sobre nosotros</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-right">
+                <button class="icon-btn" aria-label="Buscar" title="Buscar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <button class="icon-btn" aria-label="Cambiar idioma"
+                    title="Cambiar idioma">
+                    <i class="fa-solid fa-language"></i>
+                </button>
+                <button class="icon-btn cart-btn" id="btn-carrito"
+                    aria-label="Carrito" title="Carrito">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="contador-carrito" class="cart-count">(0)</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- 🛒 Panel flotante del carrito -->
+        <div id="carrito-panel" class="oculto">
+            <h2>🛒 Tu carrito</h2>
+            <div id="carrito-items"></div>
+            <hr />
+            <p id="carrito-total">Total: $0</p>
+            <div class="carrito-panel-buttons">
+                <button id="vaciar-carrito">Vaciar carrito</button>
+                <button id="finalizar-compra">Finalizar compra</button>
+                <button id="cerrar-carrito">Cerrar</button>
+            </div>
+        </div>
+
+        <script type="module" src="../js/main.js"></script>
+</body>
+</html>

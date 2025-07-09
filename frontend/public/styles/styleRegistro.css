@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body {
+    margin: 0;
+font-family: 'Roboto', sans-serif;
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh; 
+width: 100vw; 
+background-color: #8B4513; 
+overflow: hidden;
+position: relative;
+}
+
+
+
+/* Reused text and input styles */
+h1 {
+    color:#543322;
+    margin-bottom: 10px;
+    font-size: 2.2em;
+    font-weight: 700;
+}
+
+.login-box p, .register-box p { /* Apply to both boxes */
+    color: #543322;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    background-color: #F5DEB3;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    border: 1px solid #C0A680;
+    position: relative;
+}
+
+.input-group span.material-icons {
+    color: #6F4E37;
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.input-group input {
+    border: none;
+    outline: none;
+    background: transparent;
+    flex-grow: 1;
+    font-size: 1.1em;
+    color: #333;
+    padding: 5px 0;
+}
+
+.input-group input::placeholder {
+    color:#32261a;
+}
+
+.password-toggle {
+    cursor: pointer;
+    color: #6F4E37 !important;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.forgot-password {
+    color: #6F4E37;
+    text-decoration: none;
+    font-size: 0.95em;
+    display: block;
+    margin-bottom: 25px;
+    text-align: right;
+    transition: color 0.3s ease;
+}
+
+.forgot-password:hover,
+.signup-link:hover,
+.login-link:hover { /* Add login-link to hover effect */
+    color: #5C4033;
+    text-decoration: underline;
+}
+
+.btn-confirmar {
+    background-color: #543322;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+.btn-confirmar:hover {
+    background-color: #5C4033;
+    transform: translateY(-2px);
+}
+
+.signup-text, .login-text { /* Apply to both */
+    margin-top: 30px;
+    color: #5C4033;
+    font-size: 1em;
+}
+
+.signup-link, .login-link { /* Apply to both */
+    color: #6F4E37;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+
+.register-page-container {
+   display: flex;
+width: 100%; 
+max-width: none; 
+height: 100vh;
+background-color: #8B4513; 
+border-radius: 0; 
+box-shadow: none; 
+overflow: hidden; 
+min-height: 100vh; 
+}
+
+.register-image-section {
+    flex: 1; /* Takes up available space */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    display: block;
+}
+
+.register-form-section {
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+       background-image: url('../img/fondo.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20px; 
+}
+
+.register-box {
+    background-color: #B89980; 
+    padding: 70px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 450px; /* Slightly smaller max-width for the form box */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+/* Social Login Separator */
+.social-login-separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 25px 0;
+    color: #312319;
+    font-size: 0.9em;
+}
+
+.social-login-separator hr {
+    flex-grow: 1;
+    border: none;
+    border-top: 1px solid #32261a;
+    margin: 0 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between icons */
+    margin-bottom: 25px;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%; /* Make them circular */
+    background-color: #F5DEB3; /* Light background for icons */
+    color: #6F4E37; /* Icon color */
+    font-size: 24px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.social-icon:hover {
+    background-color: #E6CC9D;
+    transform: translateY(-2px);
+}

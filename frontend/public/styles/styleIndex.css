@@ -1,0 +1,604 @@
+/* Variables de Colores (afinadas para la imagen) */
+:root {
+    --color-primary-dark: #594a3d; /* Café oscuro para texto principal, footer, etc. */
+    --color-primary-light: #e0d8c4; /* Beige claro para header, fondos */
+    --color-accent-brown: #d0bda4; /* Marrón rojizo para botones, acentos */
+    --color-secondary-light: #f4f1ea; /* Fondo general muy claro, casi blanco */
+    --color-card-background: #ffffff; /* Fondo de tarjetas, blanco puro */
+    --color-offer-card: #d1c7b0; /* Color específico para tarjeta de oferta */
+    --color-text-dark: #333333; /* Texto general oscuro */
+    --color-text-light: #fefefe; /* Texto claro en fondos oscuros */
+    --color-text-muted: #666666; /* Texto más apagado */
+    --color-footer-text-muted: #c0b49b; /* Color específico para el texto muted del footer */
+}
+
+/* Reset Básico y Box-Sizing */
+body, h1, h2, h3, p, ul, li, figure {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+*, *::before, *::after {
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total del elemento */
+}
+
+body {
+    line-height: 1.6;
+    font-family: 'Roboto', sans-serif; /* Fuente principal para párrafos */
+    background-color: var(--color-secondary-light);
+    color: var(--color-text-dark);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+	--primary-color: #5d4336;
+	--background-color: #E7DBCB;
+	--dark-color: #151515;
+}
+
+html {
+
+	font-family: 'Poppins', sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+
+.heading-1 {
+	text-align: center;
+	font-weight: 10px;
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    line-height: 1.2;
+}
+.container-categories {
+    display: grid
+;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+
+
+.icon-btn {
+    background: var(--color-primary-dark);
+    color: var(--color-text-light);
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1.4rem;
+}
+
+.icon-btn:hover {
+    background-color: var(--color-accent-brown);
+}
+
+.cart-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    background: none;
+    color: var(--color-primary-dark);
+    font-size: 1.6rem;
+}
+
+.cart-btn:hover {
+    color: var(--color-accent-brown);
+}
+
+.cart-count {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.banner {
+	background-image: linear-gradient(100deg, #3b2c2584, #3b2c2562),
+		url('../assets/img/banner2.jpeg');
+	height: 60rem;
+	background-size: cover;
+	background-position: center;
+}
+
+.content-banner {
+	max-width: 90rem;
+	margin: 0 auto;
+	padding: 25rem 0;
+}
+
+
+
+.content-banner h2 {
+	color: #e7dbcb;
+	font-weight: 5000;
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem; 
+	line-height: 1.2;
+   
+}
+
+.content-banner a {
+	margin-top: 2rem;
+	text-decoration: none;
+	color: #fff;
+	background-color: #a98d76;
+	display: inline-block;
+	padding: 1rem 3rem;
+	text-transform: uppercase;
+	border-radius: 3rem;
+}
+
+/* ********************************** */
+/*            MAIN CONTENT            */
+/* ********************************** */
+.main-content {
+	background-color: #f3eee7
+}
+
+/* ********************************** */
+/*              FEATURES              */
+/* ********************************** */
+.container-features {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 3rem;
+	padding: 3rem 0;
+}
+
+.card-feature {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1.5rem;
+	font-size: 62.5%;
+	background-color: #fff;
+	border-radius: 1rem;
+	padding: 1.5rem 0;
+}
+
+.card-feature i {
+	font-size: 2.7rem;
+	color: var(--primary-color);
+}
+
+.feature-content {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.feature-content span {
+	font-weight: 700;
+	font-size: 1.2rem;
+	color: var(--dark-color);
+}
+
+.feature-content p {
+	color: #777;
+	font-weight: 500;
+}
+
+
+
+.top-categories {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin-bottom: 3rem;
+}
+
+.container-categories {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 3rem;
+}
+
+.card-category {
+	height: 20rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 2rem;
+	gap: 2rem;
+}
+.card-category p {
+    font-size: 2.5rem;
+    color: #fff;
+    text-transform: capitalize;
+    position: relative;
+}
+.card-category p::after {
+    content: '';
+    width: 2.5rem;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+.card-category span {
+    font-size: 1.6rem;
+    color: #fff;
+    cursor: pointer;
+}
+.category-moca {
+	background-image: linear-gradient(#5d433696, #5d433657),
+		url('../assets/img/juanvaldez.jpeg');
+	background-size: cover;
+	background-position: bottom;
+	background-repeat: no-repeat;
+}
+
+.category-capuchino {
+	background-image: linear-gradient(#5d433696, #5d433657),
+		url('../assets/img/lung.jpeg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.category-expreso {
+	background-image: linear-gradient(#5d433696, #5d433657),
+		url('../assets/img/colombia2.jpeg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+
+
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 90px;        
+    height: auto;         /* Mantiene proporciones */
+    display: block;
+    margin: 0;            /* Elimina márgenes */
+    padding: 0;           /* Elimina espacios internos */
+    float: left;
+}
+
+/* Clases generales para botones */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 25px; /* Bordes redondeados por defecto */
+    text-align: center;
+    font-family: 'Montserrat', sans-serif; /* Fuente para botones */
+    font-weight: 600;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    border: none; /* Asegura que no haya borde por defecto */
+}
+
+/* Featured Sections (Cultivo y Oferta) */
+.featured-sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 50px;
+    padding: 90px 5%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.featured-card {
+    background-color: var(--color-primary-light);
+    border-radius: 20px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2);
+}
+
+.featured-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8em; /* Más grande */
+    color: var(--color-primary-dark);
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.featured-text {
+    color: var(--color-text-muted);
+    margin-bottom: 35px;
+    line-height: 1.7;
+    max-width: 600px;
+    font-size: 1.05em;
+}
+
+.featured-button {
+    background-color: var(--color-accent-brown);
+    color: var(--color-text-light);
+    padding: 16px 38px; /* Ajuste de padding */
+    border-radius: 35px;
+    font-size: 1.15em;
+}
+
+.featured-button:hover {
+    background-color: #8c6e48;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.offer-card {
+    background-color: var(--color-offer-card);
+    display: flex; /* Usar flexbox para el contenido interno de la tarjeta de oferta */
+    flex-direction: column;
+    justify-content: space-between; /* Espacio entre elementos */
+    align-items: center;
+    padding: 40px; /* Reducir padding para más espacio visual para la imagen */
+}
+
+.offer-card .featured-title {
+    color: #7a634b;
+    margin-bottom: 20px; /* Ajuste de margen */
+}
+
+.offer-image-wrapper {
+    width: 100%;
+    max-width: 300px; /* Ancho específico para la imagen de la oferta */
+    height: 250px; /* Altura fija para la imagen, para un diseño consistente */
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.offer-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Recorta la imagen para que llene el contenedor */
+    border-radius: 10px;
+}
+
+.offer-details {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: var(--color-primary-dark);
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+
+/* Best Selling Products Section */
+.best-selling-section {
+    padding: 90px 5%;
+    text-align: center;
+    background-color:#f3eee7;
+}
+
+.best-selling-products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 4 columnas en desktop */
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-item {
+    background-color: #d1c7b0;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.product-image {
+    width: 180px; /* Tamaño fijo para imágenes de producto */
+    height: 180px;
+    object-fit: cover; /* Recortar para llenar el espacio */
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.product-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3em;
+    font-weight: 600;
+    color: var(--color-primary-dark);
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+    font-weight: 700;
+    color:#3b2c25;
+    margin-bottom: 20px;
+}
+
+.product-button {
+    background-color: #412d12;
+    color: var(--color-text-light);
+    padding: 10px 20px;
+    font-size: 0.95em;
+    border-radius: 20px; /* Botones un poco menos redondeados que otros */
+    font-family: 'Playfair Display', serif;
+}
+
+.product-button:hover {
+    background-color: #8c6e48;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer - Más Grande y con estructura de 3 columnas */
+.footer {
+    background-color: #3b2c25;
+    color: var(--color-text-light);
+    padding: 80px 5%; /* Grande y con padding lateral */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Centrar todo por defecto */
+}
+
+.footer-content-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las columnas se apilen en pantallas pequeñas */
+    justify-content: space-around; /* Distribuye las columnas */
+    align-items: flex-start; /* Alinea los elementos al inicio */
+    width: 100%;
+    max-width: 1200px; /* Ancho máximo para el contenido del footer */
+    margin-bottom: 40px; /* Espacio antes del copyright */
+    gap: 30px; /* Espacio entre las columnas */
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1; /* Permite que las columnas crezcan y se encojan */
+    min-width: 200px; /* Ancho mínimo para evitar que se aplasten demasiado */
+    padding: 15px; /* Padding interno para cada sección */
+    text-align: left; /* Alineación de texto por defecto para las columnas */
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-logo-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.footer-logo {
+    width: 50px; /* Tamaño del logo en el footer */
+    height: auto;
+    margin-right: 10px;
+    filter: brightness(0) invert(1); /* Hace que el logo sea blanco para el fondo oscuro */
+}
+
+.footer-logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6em; /* Tamaño del texto del logo en el footer */
+    font-weight: 700;
+    color: var(--color-text-light);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.footer-tagline {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.95em;
+    color: var(--color-footer-text-muted);
+    line-height: 1.5;
+}
+
+.footer-center {
+    text-align: center; /* Centrar enlaces del medio */
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column; /* Lista vertical de enlaces */
+    gap: 12px; /* Espacio entre enlaces */
+    padding: 0;
+}
+
+.footer-links li a {
+    color: var(--color-footer-text-muted);
+    font-size: 1.05em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer-links li a:hover {
+    color: var(--color-text-light);
+    text-decoration: underline;
+}
+
+.footer-right {
+    text-align: right; /* Alinear a la derecha los elementos de la derecha */
+}
+
+.footer-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: var(--color-text-light);
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-end; /* Alinear a la derecha los iconos */
+    gap: 15px; /* Espacio entre iconos sociales */
+}
+
+.social-icons a {
+    color: var(--color-text-light);
+    font-size: 1.8em;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-icons a:hover {
+    color: var(--color-accent-brown);
+    transform: translateY(-4px);
+}
+
+.copyright-section {
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Línea divisoria */
+    padding-top: 25px;
+    width: 100%;
+    text-align: center;
+}
+
+.copyright {
+    font-size: 0.9em;
+    color: var(--color-footer-text-muted);
+}

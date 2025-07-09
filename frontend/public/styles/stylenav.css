@@ -1,0 +1,211 @@
+:root {
+    --color-primary-dark: #594a3d; /* Café oscuro para texto principal, footer, etc. */
+    --color-primary-light: #e0d8c4; /* Beige claro para header, fondos */
+    --color-accent-brown: #d0bda4; /* Marrón rojizo para botones, acentos */
+    --color-secondary-light: #f4f1ea; /* Fondo general muy claro, casi blanco */
+    --color-card-background: #ffffff; /* Fondo de tarjetas, blanco puro */
+    --color-offer-card: #d1c7b0; /* Color específico para tarjeta de oferta */
+    --color-text-dark: #333333; /* Texto general oscuro */
+    --color-text-light: #fefefe; /* Texto claro en fondos oscuros */
+    --color-text-muted: #666666; /* Texto más apagado */
+    --color-footer-text-muted: #c0b49b; /* Color específico para el texto muted del footer */
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.4em;
+    color: var(--color-primary-dark);
+    transition: color 0.3s ease;
+    padding: 5px; /* Pequeño padding para el área de clic */
+}
+
+.icon-btn:hover {
+    color: var(--color-accent-brown);
+}
+
+/* Header */
+.header {
+    background-color:  #e7dbcb;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.logo {
+    width: 55px; /* Ajuste del tamaño del logo */
+    height: auto;
+    margin-right: 12px;
+}
+
+.logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5em; /* Ajuste del tamaño del texto del logo */
+    font-weight: 700;
+    color: var(--color-primary-dark);
+}
+
+.navigation ul {
+    display: flex;
+    gap: 30px; /* Más espacio entre los ítems de navegación */
+}
+
+.navigation a {
+    padding: 10px 0;
+    color:#3b2c25;
+    font-family: 'Montserrat', sans-serif; /* Misma fuente que los botones */
+    font-weight: 600;
+    font-size: 1.80em;
+    position: relative;
+    transition: color 0.3s ease;
+    font-family: 'Playfair Display', serif;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-accent-brown);
+    transition: width 0.3s ease;
+}
+
+.navigation a:hover::after {
+    width: 100%;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.cart-count {
+    background-color:#3b2c25;
+    color: var(--color-text-light);
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 0.8em;
+    margin-left: 8px;
+    min-width: 24px;
+    text-align: center;
+    line-height: 1;
+}
+
+#carrito-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 320px;
+  height: 100%;
+  background: #fff;
+  border-left: 2px solid #ccc;
+  padding: 1rem;
+  box-shadow: -3px 0 15px rgba(0, 0, 0, 0.1);
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+#carrito-panel.visible {
+  transform: translateX(0);
+}
+
+.oculto {
+  display: none;
+}
+
+#carrito-items > div {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+#carrito-total {
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-align: right;
+}
+
+.carrito-panel-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.oculto {
+  display: none;
+}
+.visible {
+  display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navigation ul {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: var(--color-primary-dark);
+    font-size: 1.6rem;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.navigation a.active {
+    background-color: #a98d76;
+    color: var(--color-text-light);
+    padding: 0.4rem 1.2rem;
+    border-radius: 5px;
+}
+
+.navigation a:hover {
+    color: var(--color-accent-brown);
+}
+
+/* HEADER ESTILO NUEVO */
+.header {
+    background-color: var(--color-primary-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 4%;
+    border-top: 3px solid var(--color-primary-dark);
+}
+
+.header-left .logo {
+    width: 70px;
+    height: auto;
+}
+
+
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
