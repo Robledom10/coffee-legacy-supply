@@ -19,7 +19,7 @@ export function handleUsuarios(req: IncomingMessage, res: ServerResponse) {
     return crearUsuario(req, res);
   }
 
-  if (req.method === 'POST' && url === '/api/login') {
+ if (url === "/api/usuarios/login" && req.method === "POST") {
     return login(req, res);
   }
 

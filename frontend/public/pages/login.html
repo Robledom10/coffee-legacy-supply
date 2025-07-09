@@ -13,14 +13,14 @@
             <h1>Bienvenidos a coffee!</h1>
             <p>Por favor, inicia sesión para continuar.</p>
 
-            <form id="loginForm">
+            <form id="form-login" method="POST">
                 <div class="input-group">
                     <span class="material-icons">person</span>
-                    <input type="text" id="username" placeholder="usuario" required>
+                    <input type="email" id="email" placeholder="Correo" required>
                 </div>
                 <div class="input-group">
                     <span class="material-icons">lock</span>
-                    <input type="password" id="password" placeholder="contraseña" required>
+                    <input type="password" id="contraseña_hash" placeholder="contraseña" required>
                     <span class="material-icons password-toggle" id="togglePassword">visibility_off</span>
                 </div>
                 <a href="#" class="forgot-password">¿Olvidaste la contraseña?</a>

@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
 });
 
-// 👉 CLICK GLOBAL PARA TODO
+// CLICK GLOBAL PARA TODO
 document.addEventListener("click", async (e) => {
   // Agregar al carrito
 if (e.target.classList.contains("btn-agregar")) {
@@ -84,7 +84,7 @@ if (e.target.classList.contains("btn-agregar")) {
     const carrito = obtenerCarrito();
 
     if (carrito.length === 0) {
-      alert("🚫 Tu carrito está vacío");
+      alert("Tu carrito está vacío");
       return;
     }
 
@@ -99,7 +99,7 @@ if (e.target.classList.contains("btn-agregar")) {
 
       vaciarCarrito();
       renderizarCarrito();
-      alert("✅ Compra finalizada con éxito");
+      alert("Compra finalizada con éxito");
     } catch (error) {
       console.error(error);
       alert("❌ Error al procesar la compra");
@@ -107,7 +107,7 @@ if (e.target.classList.contains("btn-agregar")) {
   }
 });
 
-// 👉 INPUT para cambiar cantidades
+// INPUT para cambiar cantidades
 document.addEventListener("input", (e) => {
   if (e.target.classList.contains("cantidad-input")) {
     const id = e.target.dataset.id;
@@ -127,6 +127,15 @@ fetch("/components/nav.html")
   .then((html) => {
     navContainer.innerHTML = html;
 
-    // 👇 Recién después que el HTML se inserta, podés hacer cosas con los botones
+    //  Recién después que el HTML se inserta, podés hacer cosas con los botones
     importarEventosDelNav();
   });
+
+  document.addEventListener("DOMContentLoaded", () => {
+  fetch("/components/footer.html")
+    .then((res) => res.text())
+    .then((html) => {
+      document.getElementById("footer-container").innerHTML = html;
+    })
+    .catch((err) => console.error("Error al cargar el footer:", err));
+});

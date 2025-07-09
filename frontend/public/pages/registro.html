@@ -17,18 +17,18 @@
             <div class="register-box">
                 <h1>Registrarse!</h1>
 
-                <form id="registerForm">
+                <form method="post" id="form-registro">
                     <div class="input-group">
                         <span class="material-icons">person</span>
-                        <input type="text" id="regName" placeholder="Nombre:" required>
+                        <input type="text" id="nombre" placeholder="Nombre:" required>
                     </div>
                     <div class="input-group">
                         <span class="material-icons">email</span>
-                        <input type="email" id="regEmail" placeholder="Correo:" required>
+                        <input type="email" id="email" placeholder="Correo:" required>
                     </div>
                     <div class="input-group">
                         <span class="material-icons">lock</span>
-                        <input type="password" id="regPassword" placeholder="Contraseña:" required>
+                        <input type="password" id="contraseña_hash" placeholder="Contraseña:" required>
                         <span class="material-icons password-toggle" id="toggleRegPassword">visibility_off</span>
                     </div>
 

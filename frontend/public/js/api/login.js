@@ -1,35 +1,30 @@
-const form = document.getElementById('form-login');
-
-form.addEventListener('submit', async (e) => {
+document.getElementById('form-login').addEventListener('submit', async (e) => {
   e.preventDefault();
 
-  const email = document.getElementById('email').value.trim();
-  const password = document.getElementById('password').value.trim();
+  const email = document.getElementById('email').value;
+  const contraseña = document.getElementById('contraseña_hash').value;
 
   try {
-    const res = await fetch('http://localhost:3000/api/auth/login', {
+    const response = await fetch('http://localhost:3000/api/usuarios/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, password })
+      body: JSON.stringify({ email, contraseña }), // Asegúrate que el backend también use "contraseña"
     });
 
-    const data = await res.json();
-
-    if (!res.ok) {
-      alert(`❌ ${data.message || 'Error al iniciar sesión'}`);
-      return;
+    if (!response.ok) {
+      const errorText = await response.text();
+      throw new Error(errorText);
     }
 
-    // Suponiendo que el backend responde con token y datos del usuario
+    const data = await response.json();
+    console.log('✅ Login exitoso:', data);
+
+    // Guardar token y usuario
     localStorage.setItem('token', data.token);
     localStorage.setItem('usuario', JSON.stringify(data.usuario));
 
-    alert('✅ Sesión iniciada con éxito');
-
-    // Redirigir a home o perfil
-    window.location.href = '../../index.html';
-  } catch (error) {
-    console.error('Error al iniciar sesión:', error);
-    alert('❌ Error al conectar con el servidor');
+    window.location.href = '../index.html';
+  } catch (err) {
+    console.error('❌ Error al iniciar sesión:', err.message);
   }
 });

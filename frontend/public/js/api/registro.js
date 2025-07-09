@@ -1,26 +1,25 @@
-const API_URL = 'http://localhost:3000/api/usuarios'; // Ajusta la URL si es necesario
+const API_URL = 'http://localhost:3000';
 
 document.getElementById('form-registro').addEventListener('submit', async (e) => {
   e.preventDefault();
 
   const nombre = document.getElementById('nombre').value;
   const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
-  const tipo_usuario = document.getElementById('tipo_usuario').value;
+  const contraseña = document.getElementById('contraseña_hash').value;
 
   try {
-    const res = await fetch(API_URL + '/registro', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ nombre, email, password, tipo_usuario }),
-    });
+  const res = await fetch(API_URL + '/api/usuarios', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ nombre, email, contraseña })
+  });
 
-    const data = await res.json();
+  const data = await res.json();
 
-    if (!res.ok) throw new Error(data.message || 'Error al registrarse');
+  if (!res.ok) throw new Error(data.message || 'Error al registrarse');
 
     alert('✅ Registro exitoso. Inicia sesión.');
-    window.location.href = '../../pages/login.html'; // Redirige al login
+    window.location.href = './login.html'; // Redirige al login
   } catch (err) {
     alert('❌ ' + err.message);
   }

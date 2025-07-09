@@ -23,14 +23,13 @@ interface Usuario extends RowDataPacket {
   id: number;
   nombre: string;
   email: string;
-  tipo_usuario: string;
   contraseña_hash?: string;
 }
 
 export async function getUsuarios(res: ServerResponse) {
   try {
     const [rows] = await db.query<Usuario[]>(
-      "SELECT id, nombre, email, tipo_usuario FROM usuarios"
+      "SELECT id, nombre, email FROM usuarios"
     );
     res.statusCode = 200;
     res.setHeader("Content-Type", "application/json");
@@ -44,7 +43,7 @@ export async function getUsuarios(res: ServerResponse) {
 export async function getUsuarioById(id: number, res: ServerResponse) {
   try {
     const [rows] = await db.query<Usuario[]>(
-      "SELECT id, nombre, email, tipo_usuario FROM usuarios WHERE id = ?",
+      "SELECT id, nombre, email FROM usuarios WHERE id = ?",
       [id]
     );
 
@@ -65,12 +64,12 @@ export async function getUsuarioById(id: number, res: ServerResponse) {
 
 export async function crearUsuario(req: IncomingMessage, res: ServerResponse) {
   try {
-    const { nombre, email, contraseña, tipo_usuario } = await parseBody(req);
+    const { nombre, email, contraseña } = await parseBody(req);
     const hash = await hashPassword(contraseña);
 
     const [result] = await db.query<ResultSetHeader>(
-      "INSERT INTO usuarios (nombre, email, contraseña_hash, tipo_usuario) VALUES (?, ?, ?, ?)",
-      [nombre, email, hash, tipo_usuario]
+      "INSERT INTO usuarios (nombre, email, contraseña_hash) VALUES (?, ?, ?)",
+      [nombre, email, hash]
     );
 
     res.statusCode = 201;
@@ -98,13 +97,19 @@ export async function login(req: IncomingMessage, res: ServerResponse) {
       res.setHeader("Content-Type", "application/json");
       res.end(JSON.stringify({ error: "Credenciales inválidas" }));
     } else {
+      // Aquí deberías generar un token JWT o similar. Por ejemplo:
+      const token = "dummy-token"; // Reemplaza esto con la generación real de token
+
       res.statusCode = 200;
       res.setHeader("Content-Type", "application/json");
       res.end(
         JSON.stringify({
-          id: usuario.id,
-          nombre: usuario.nombre,
-          tipo_usuario: usuario.tipo_usuario
+          token,
+          usuario: {
+            id: usuario.id,
+            nombre: usuario.nombre,
+            email: usuario.email
+          }
         })
       );
     }
@@ -131,7 +136,8 @@ export async function eliminarUsuario(id: number, res: ServerResponse) {
       res.statusCode = 200;
       res.end(JSON.stringify({ success: true }));
     }
-  } catch (err: any) {
+  }
+  catch (err: any) {
     res.statusCode = 500;
     res.setHeader("Content-Type", "application/json");
     res.end(JSON.stringify({ error: err.message }));

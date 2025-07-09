@@ -162,7 +162,7 @@ html {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 3rem;
-	padding: 3rem 0;
+	padding: 3rem;
 }
 
 .card-feature {
@@ -211,6 +211,7 @@ html {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 3rem;
+    margin: 0 3rem;
 }
 
 .card-category {
@@ -474,131 +475,3 @@ img {
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Footer - Más Grande y con estructura de 3 columnas */
-.footer {
-    background-color: #3b2c25;
-    color: var(--color-text-light);
-    padding: 80px 5%; /* Grande y con padding lateral */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center; /* Centrar todo por defecto */
-}
-
-.footer-content-wrapper {
-    display: flex;
-    flex-wrap: wrap; /* Permite que las columnas se apilen en pantallas pequeñas */
-    justify-content: space-around; /* Distribuye las columnas */
-    align-items: flex-start; /* Alinea los elementos al inicio */
-    width: 100%;
-    max-width: 1200px; /* Ancho máximo para el contenido del footer */
-    margin-bottom: 40px; /* Espacio antes del copyright */
-    gap: 30px; /* Espacio entre las columnas */
-}
-
-.footer-left, .footer-center, .footer-right {
-    flex: 1; /* Permite que las columnas crezcan y se encojan */
-    min-width: 200px; /* Ancho mínimo para evitar que se aplasten demasiado */
-    padding: 15px; /* Padding interno para cada sección */
-    text-align: left; /* Alineación de texto por defecto para las columnas */
-}
-
-.footer-left {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.footer-logo-container {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.footer-logo {
-    width: 50px; /* Tamaño del logo en el footer */
-    height: auto;
-    margin-right: 10px;
-    filter: brightness(0) invert(1); /* Hace que el logo sea blanco para el fondo oscuro */
-}
-
-.footer-logo-text {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.6em; /* Tamaño del texto del logo en el footer */
-    font-weight: 700;
-    color: var(--color-text-light);
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-}
-
-.footer-tagline {
-    font-family: 'Roboto', sans-serif;
-    font-size: 0.95em;
-    color: var(--color-footer-text-muted);
-    line-height: 1.5;
-}
-
-.footer-center {
-    text-align: center; /* Centrar enlaces del medio */
-}
-
-.footer-links {
-    display: flex;
-    flex-direction: column; /* Lista vertical de enlaces */
-    gap: 12px; /* Espacio entre enlaces */
-    padding: 0;
-}
-
-.footer-links li a {
-    color: var(--color-footer-text-muted);
-    font-size: 1.05em;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.footer-links li a:hover {
-    color: var(--color-text-light);
-    text-decoration: underline;
-}
-
-.footer-right {
-    text-align: right; /* Alinear a la derecha los elementos de la derecha */
-}
-
-.footer-heading {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.2em;
-    font-weight: 700;
-    color: var(--color-text-light);
-    margin-bottom: 15px;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: flex-end; /* Alinear a la derecha los iconos */
-    gap: 15px; /* Espacio entre iconos sociales */
-}
-
-.social-icons a {
-    color: var(--color-text-light);
-    font-size: 1.8em;
-    transition: color 0.3s ease, transform 0.2s ease;
-}
-
-.social-icons a:hover {
-    color: var(--color-accent-brown);
-    transform: translateY(-4px);
-}
-
-.copyright-section {
-    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Línea divisoria */
-    padding-top: 25px;
-    width: 100%;
-    text-align: center;
-}
-
-.copyright {
-    font-size: 0.9em;
-    color: var(--color-footer-text-muted);
-}
