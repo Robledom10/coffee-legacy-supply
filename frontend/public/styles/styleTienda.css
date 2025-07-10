@@ -19,15 +19,12 @@ img {
   display: block;
 }
 
-
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: var(--beige);
   line-height: 1.6;
 }
-
-
 
 .encabezado {
   display: flex;
@@ -39,12 +36,13 @@ body {
   border-bottom: 4px solid var(--marron);
 }
 
-
-
-
 .hero {
-  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)),
-    url('../assets/img/bannermitienda.webp');
+  background-image: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.2)
+    ),
+    url("../assets/img/bannermitienda.webp");
   background-size: cover;
   background-position: center;
   height: 450px;
@@ -68,7 +66,7 @@ body {
 }
 
 .contenido-hero h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 3rem;
   margin-bottom: 1rem;
   color: #e7dbcb;
@@ -102,7 +100,7 @@ body {
   font-size: 2rem;
   color: #a98d76;
   margin-bottom: 0.8rem;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
 }
 
 .sidebar ul {
@@ -121,7 +119,6 @@ body {
   font-weight: bold;
 }
 
-
 .sidebar ul li a {
   display: block;
   padding: 8px 12px;
@@ -136,42 +133,14 @@ body {
   background-color: var(--cafe-claro);
   color: var(--blanco);
 }
-
-.productos {
-  flex: 1;
-}
-
-.productos h2 {
-  font-size: 2rem;
-  color: var(--marron-oscuro);
-  margin-bottom: 1.5rem;
-  font-family: 'Playfair Display', serif;
-  display: flex;
-  justify-content: center;
-}
-
 .grid-productos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
-}
-.productos {
-  flex: 1;
-}
+  padding: 2rem;
 
-.productos h2 {
-  font-size: 2rem;
-  color: var(--marron-oscuro);
-  margin-bottom: 1.5rem;
-  font-family: 'Playfair Display', serif;
-  display: flex;
-  justify-content: center;
-}
-
-.grid-productos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
+  /* ✅ Esto centra los productos si tienen menor ancho */
+  justify-items: center;
 }
 
 .producto {
@@ -179,11 +148,15 @@ body {
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  width: 220px;
-  margin: 10px;
+  margin: 0 auto; /* Centrado horizontal */
   padding: 1rem;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  /* ✅ Estas 3 líneas hacen la magia */
+  width: 100%;
+  max-width: 300px;
+  justify-self: center;
 }
 
 .producto:hover {
@@ -213,7 +186,7 @@ body {
   color: var(--marron);
   font-weight: 600;
   text-align: center;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
 }
 
 .producto .info p {
