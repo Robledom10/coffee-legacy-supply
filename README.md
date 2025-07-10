@@ -96,6 +96,6 @@ Frontend en: `http://localhost:5173`
 
 ## ✨ Créditos
 
-Desarrollado por Robledo 💻☕
+Desarrollado por Robledo, stefania y ximena 💻☕
 
 ---
