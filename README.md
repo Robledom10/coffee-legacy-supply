@@ -9,7 +9,7 @@ Marketplace Coffee es una aplicación web fullstack donde usuarios pueden regist
 ```
 .
 ├── backend/        # API REST con Node.js + TypeScript (sin frameworks)
-└── frontend/       # Frontend en React + Vite + TypeScript
+└── frontend/       # Frontend Js sin frameworks
 ```
 
 ---
@@ -65,10 +65,10 @@ Servidor en: `http://localhost:3000`
 ```bash
 cd frontend
 npm install
-npm run dev
+npm start
 ```
 
-Frontend en: `http://localhost:5173`
+Frontend en: `http://localhost:8080`
 
 ---
 
